@@ -10,7 +10,7 @@
  * 说明：以下代码只是为了方便商户测试而提供的样例代码，商户可以根据自己的需要，按照技术文档编写,并非一定要使用该代码。该代码仅供参考。
  */
 header('Content-Type:text/html;charset=utf-8');
-require_once("../lib/upmp_service.php");
+require_once("./lib/upmp_service.php");
 
 //需要填入的部分
 $req['version']     	= upmp_config::$version; // 版本号

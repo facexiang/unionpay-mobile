@@ -56,7 +56,8 @@ class UpmpService {
     	$filteredReq[upmp_config::SIGNATURE] = $signature;
     	$filteredReq[upmp_config::SIGN_METHOD] = upmp_config::$sign_method;
     	
-    	return createLinkstring($filteredReq, false, true);
+    	$endSignature = createLinkstring($filteredReq, true, true);
+      return $endSignature.upmp_config::QSTRING_SPLIT.md5(upmp_config::$security_key);
     }
     
     /**
